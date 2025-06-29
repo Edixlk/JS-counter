@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <style>
+        #countlabl {
+            display: block;
+            text-align: center;
+            font-size: 10em;
+            font-family: sans-serif;
+        }
+
+        .btn-cont {
+            height: 100svh;
+            display: grid;
+            place-content: center;
+            gap: 1em;
+        }
+
+        button {
+            padding: 1em;
+            font-size: 1.2rem;
+            background-color: dodgerblue;
+            color: white;
+            outline: none;
+            border: none;
+            width: 150px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: rgb(29, 118, 207);
+        }
+
+        #Incr-btn:hover {
+            background-color: green;
+        }
+
+        #Decr-btn:hover {
+            background-color: red;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <div class="btn-cont">
+
+
+        <label id="countlabl">0</label>
+
+
+        <div>
+
+            <button id="Incr-btn">Increase</button>
+            <button id="Rset-btn">Reset</button>
+            <button id="Decr-btn">Decrease</button>
+
+        </div>
+
+
+
+
+    </div>
+
+
+    <script>
+
+        const CountLabl = document.getElementById("countlabl");
+
+        const IncrBtn = document.getElementById("Incr-btn");
+        const RsetBtn = document.getElementById("Rset-btn");
+        const DecrBtn = document.getElementById("Decr-btn");
+
+
+        let Count = 0;
+
+        // Increase
+        IncrBtn.onclick = function () {
+            Count++;
+            CountLabl.textContent = Count;
+        }
+
+        //Reset to zero
+        RsetBtn.onclick = function () {
+            Count = 0;
+            CountLabl.textContent = Count;
+        }
+
+        //Decrease
+        DecrBtn.onclick = function () {
+            Count--;
+            CountLabl.textContent = Count;
+        }
+
+    </script>
+
+</body>
+
+</html>
