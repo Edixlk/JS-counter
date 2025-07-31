@@ -4,6 +4,13 @@
 <head>
 
     <style>
+
+        body {
+            background-color: rgb(2, 42, 87);
+            color: white;
+            padding: 1em;
+        }
+        
         #countlabl {
             display: block;
             text-align: center;
@@ -15,18 +22,27 @@
             height: 100svh;
             display: grid;
             place-content: center;
-            gap: 1em;
+            gap: 2em;
+        }
+
+        .btn-options {
+            display: flex;
+            grid-gap: 1em;
+            flex-wrap: wrap;
+            justify-content: center;
         }
 
         button {
             padding: 1em;
             font-size: 1.2rem;
-            background-color: dodgerblue;
+            background-color:  rgb(3, 71, 147);
             color: white;
             outline: none;
             border: none;
             width: 150px;
             cursor: pointer;
+            border-radius: 0.5rem;
+            margin-bottom: 2em 0;
         }
 
         button:hover {
@@ -40,6 +56,21 @@
         #Decr-btn:hover {
             background-color: red;
         }
+
+
+        a {
+            justify-self:  center;
+            text-align: center;
+            text-decoration: none;
+            font-size: 2rem;
+            color: rgba(31, 138, 245, 0.498);
+            font-family: sans-serif;
+            margin-top: 1em;
+            display: block;
+            width: fit-content;
+        }
+
+
     </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -55,13 +86,16 @@
         <label id="countlabl">0</label>
 
 
-        <div>
+        <div class="btn-options">
 
             <button id="Incr-btn">Increase</button>
             <button id="Rset-btn">Reset</button>
             <button id="Decr-btn">Decrease</button>
 
         </div>
+
+
+        <a href="https://github.com/Edixlk" title="Github page">@edixlk</a>
 
 
 
