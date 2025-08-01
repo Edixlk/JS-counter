@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <style>
+
+        body {
+            background-color: rgb(2, 42, 87);
+            color: white;
+            padding: 1em;
+        }
+        
+        #countlabl {
+            display: block;
+            text-align: center;
+            font-size: 10em;
+            font-family: sans-serif;
+        }
+
+        .btn-cont {
+            height: 100svh;
+            display: grid;
+            place-content: center;
+            gap: 2em;
+        }
+
+        .btn-options {
+            display: flex;
+            grid-gap: 1em;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        button {
+            padding: 1em;
+            font-size: 1.2rem;
+            background-color:  rgb(3, 71, 147);
+            color: white;
+            outline: none;
+            border: none;
+            width: 150px;
+            cursor: pointer;
+            border-radius: 0.5rem;
+            margin-bottom: 2em 0;
+        }
+
+        button:hover {
+            background-color: rgb(29, 118, 207);
+        }
+
+        #Incr-btn:hover {
+            background-color: green;
+        }
+
+        #Decr-btn:hover {
+            background-color: red;
+        }
+
+
+        a {
+            justify-self:  center;
+            text-align: center;
+            text-decoration: none;
+            font-size: 2rem;
+            color: rgba(31, 138, 245, 0.498);
+            font-family: sans-serif;
+            margin-top: 1em;
+            display: block;
+            width: fit-content;
+        }
+
+
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <div class="btn-cont">
+
+
+        <label id="countlabl">0</label>
+
+
+        <div class="btn-options">
+
+            <button id="Incr-btn">Increase</button>
+            <button id="Rset-btn">Reset</button>
+            <button id="Decr-btn">Decrease</button>
+
+        </div>
+
+
+        <a href="https://github.com/Edixlk" title="Github page">@edixlk</a>
+
+
+
+
+    </div>
+
+
+    <script>
+
+        const CountLabl = document.getElementById("countlabl");
+
+        const IncrBtn = document.getElementById("Incr-btn");
+        const RsetBtn = document.getElementById("Rset-btn");
+        const DecrBtn = document.getElementById("Decr-btn");
+
+
+        let Count = 0;
+
+        // Increase
+        IncrBtn.onclick = function () {
+            Count++;
+            CountLabl.textContent = Count;
+        }
+
+        //Reset to zero
+        RsetBtn.onclick = function () {
+            Count = 0;
+            CountLabl.textContent = Count;
+        }
+
+        //Decrease
+        DecrBtn.onclick = function () {
+            Count--;
+            CountLabl.textContent = Count;
+        }
+
+    </script>
+
+</body>
+
+</html>
